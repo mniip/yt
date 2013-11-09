@@ -28,11 +28,15 @@ Examples
 --------
 
     ./yt.lua http://www.youtube.com/watch?v=dQw4w9WgXcQ
+
 	./yt.lua dQw4w9WgXcQ
+
 	./yt.lua dQw4w9WgXcQ + +
 	# automatically pick the best quality
+
 	./yt.lua dQw4w9WgXcQ - -
 	# automatically pick the worst quality (for fast download)
+
 	./yt.lua dQw4w9WgXcQ "" 1
 	# interactively choose audio format, but select first video format automatically
 
