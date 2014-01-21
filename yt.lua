@@ -19,7 +19,7 @@ local function wflush(x)
 end
 assert(arg[1],"Must specify an URI or an ID")
 local id=assert(arg[1]:match"[?&]v=([^&]*)"or arg[1],"Could not find and ID in:\n"..arg[1])
-assert(not id:match"[^a-zA-Z0-9_]","Does not look like a valid ID:\n"..id)
+assert(not id:match"[^a-zA-Z0-9_-]","Does not look like a valid ID:\n"..id)
 wflush"Fetching headers... "
 local page=assert(backtick("wget -qO- http://youtube.com/watch?v="..id),"Could not fetch http://youtube.com/watch?v="..id)
 print"Done"
